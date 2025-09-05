@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>グラフィカルマルチポモドーロタイマー</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <button id="menuButton" onclick="showSettings()">⚙ 設定</button>
+    </header>
+
+    <div id="timerScreen">
+        <div class="timer-wrapper">
+            <svg class="progress-ring" width="400" height="400">
+                <circle class="progress-ring__circle" stroke="white" stroke-width="15" fill="transparent" r="180"
+                    cx="200" cy="200" />
+            </svg>
+            <div class="timer" id="timerDisplay">00:00</div>
+        </div>
+
+        <div id="currentTask">停止中</div>
+
+        <div id="controls">
+            <button onclick="startTimer()">開始</button>
+            <button onclick="pauseTimer()">一時停止</button>
+            <button onclick="stopTimer()">終了</button>
+        </div>
+
+        <div id="schedule"></div>
+    </div>
+
+    <div id="settingsScreen">
+        <h2>設定</h2>
+        <label>人数: <input type="number" id="numPeople" min="1" value="2"></label>
+        <div id="nameForm"></div>
+        <label>作業時間（分）: <input type="number" id="workTime" value="5"></label>
+        <label>作業回数の頻度: <input type="number" id="frequency" value="5"></label>
+        <label>休憩時間（分）: <input type="number" id="breakTime" value="5"></label>
+        <button onclick="saveAndBack()">保存して戻る</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
