@@ -21,6 +21,8 @@ function showSettings() {
     document.getElementById("settingsScreen").style.display = "flex";
     generateNameInputs();
     loadSettings();
+
+    document.getElementById("numPeople").addEventListener("input", generateNameInputs);
 }
 
 function saveAndBack() {

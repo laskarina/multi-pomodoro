@@ -110,7 +110,7 @@ header {
 }
 
 #schedule {
-    display: none;
+    display: fixed;
     position: absolute;
     bottom: 20px;
     right: 20px;
